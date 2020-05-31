@@ -7,7 +7,7 @@ $ProjectModuleBasePath = $PSScriptRoot
 
 $DirectoriesToRemoving = "packages","bin","obj","logs",".logs","publish",".publish"
 $DirectoriesToRemovingAdditional = ".vs",".vscode",".idea"
-$FilesToRemoving = "*.cache","*.log"
+$FilesToRemoving = "*.cache","*.log","*.o"
 $FilesToRemovingAdditional = "*.vspscc","*.pubxml","*.bak","*.DotSettings.user"
 
 
