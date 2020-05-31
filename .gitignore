@@ -1,0 +1,53 @@
+### OS directories
+.Spotlight-V100
+.Trashes
+
+### OS files
+.DS_Store
+.DS_Store?
+Thumbs.db
+
+### IDE directories
+.vs
+.vscode
+.idea
+
+### IDE files
+*.suo
+*.csproj.user
+*.xproj.user
+*.userprefs
+*.DotSettings.user
+
+### TESTS directories
+
+
+### TESTS files
+*.ncrunchsolution.user
+*.ncrunchsolution.cache
+*.ncrunchproject.user
+*.ncrunchproject.cache
+
+### .NET directories
+
+
+### .NET files
+project.lock.json
+
+### Temp directories
+bin
+obj
+tmp
+
+### Temp files
+*.log
+
+### Full path
+/deps/*
+/samples/*
+/logs/*
+/tmp/*
+/bin/*
+
+/src/packages/*
+/src/tests.ps1
