@@ -5,16 +5,34 @@
 # vars
 $ProjectModuleBasePath = $PSScriptRoot
 
-$DirectoriesToRemoving = "packages","bin","obj","logs",".logs","publish",".publish"
-$DirectoriesToRemovingAdditional = ".vs",".vscode",".idea"
-$FilesToRemoving = "*.cache","*.log","*.o"
-$FilesToRemovingAdditional = "*.vspscc","*.pubxml","*.bak","*.DotSettings.user"
+$DirectoriesToRemoving = @("packages",
+                           "bin",
+                           "obj",
+                           "logs",
+                           ".logs",
+                           "publish",
+                           ".publish",
+                           ".mstest",
+                           ".xunit",
+                           ".nunit")
+$DirectoriesToRemovingAdditional = @(".vs",
+                                     ".vscode",
+                                     ".idea")
+
+$FilesToRemoving = @("*.cache",
+                     "*.log",
+                     "*.o")
+$FilesToRemovingAdditional = @("*.vspscc",
+                               "*.pubxml",
+                               "*.bak",
+                               "*.DotSettings.user")
 
 
 
 # functions
 function Invoke-ProjectClean
 {
+    [CmdletBinding()]
     Param
     (
          [Parameter(Mandatory=$false, Position=0)]
@@ -72,11 +90,15 @@ function Invoke-ProjectRestore
     Invoke-ProjectNugetRestore
 }
 
+
+
 function Invoke-ProjectCleanAndRestore
 {
     Invoke-ProjectClean
     Invoke-ProjectRestore
 }
+
+
 
 function Invoke-ProjectNugetRestore
 {
@@ -92,6 +114,7 @@ function Invoke-ProjectNugetRestore
 # export
 Export-ModuleMember -function Invoke-ProjectClean
 Export-ModuleMember -function Invoke-ProjectRestore
+
 Export-ModuleMember -function Invoke-ProjectCleanAndRestore
 
 Export-ModuleMember -function Invoke-ProjectNugetRestore

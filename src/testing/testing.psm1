@@ -11,13 +11,20 @@ $xUnitResultPath = "./.xunit/"
 
 
 
- # import modules
+# import modules
 Import-Module $TestingModuleBasePath/../project/project.psm1
 
 
 
- # functions
-function Invoke-xUnitTests
+# functions
+function Invoke-Testing
+{
+    Invoke-TestingxUnit
+}
+
+
+
+function Invoke-TestingxUnit
 {
     $items = Get-ChildItem -File -Filter *.sln -Recurse -Force
     foreach ($item in $items)
@@ -29,5 +36,7 @@ function Invoke-xUnitTests
 
 
 # export
-Export-ModuleMember -function Invoke-xUnitTests
+Export-ModuleMember -function Invoke-Testing
+
+Export-ModuleMember -function Invoke-TestingxUnit
  
