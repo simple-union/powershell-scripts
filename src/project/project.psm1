@@ -21,7 +21,9 @@ $DirectoriesToRemovingAdditional = @(".vs",
 
 $FilesToRemoving = @("*.cache",
                      "*.log",
-                     "*.o")
+                     "*.o",
+                     "*.pyc",
+                     "*.pyo")
 $FilesToRemovingAdditional = @("*.vspscc",
                                "*.pubxml",
                                "*.bak",
