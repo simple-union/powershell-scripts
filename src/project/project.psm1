@@ -14,7 +14,8 @@ $DirectoriesToRemoving = @("packages",
                            ".publish",
                            ".mstest",
                            ".xunit",
-                           ".nunit")
+                           ".nunit",
+                           "__pycache__")
 $DirectoriesToRemovingAdditional = @(".vs",
                                      ".vscode",
                                      ".idea")
