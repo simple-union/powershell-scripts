@@ -1,7 +1,6 @@
 ﻿# module "project"
 
 
-
 # vars
 $ProjectModuleBasePath = $PSScriptRoot
 
@@ -29,7 +28,6 @@ $FilesToRemovingAdditional = @("*.vspscc",
                                "*.pubxml",
                                "*.bak",
                                "*.DotSettings.user")
-
 
 
 # functions
@@ -94,13 +92,11 @@ function Invoke-ProjectRestore
 }
 
 
-
 function Invoke-ProjectCleanAndRestore
 {
     Invoke-ProjectClean
     Invoke-ProjectRestore
 }
-
 
 
 function Invoke-ProjectNugetRestore
@@ -111,7 +107,6 @@ function Invoke-ProjectNugetRestore
         nuget restore $item.FullName
     }
 }
-
 
 
 # export

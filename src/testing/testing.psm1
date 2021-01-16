@@ -10,10 +10,8 @@ $xUnitRunnerPathNETCore = "$TestingModuleBasePath/testing/tools/xunit.runner.con
 $xUnitResultPath = "./.xunit/"
 
 
-
 # import modules
 Import-Module $TestingModuleBasePath/../project/project.psm1
-
 
 
 # functions
@@ -21,7 +19,6 @@ function Invoke-Testing
 {
     Invoke-TestingxUnit
 }
-
 
 
 function Invoke-TestingxUnit
@@ -32,7 +29,6 @@ function Invoke-TestingxUnit
         msbuild /t:build $item.FullName
     }
 }
-
 
 
 # export

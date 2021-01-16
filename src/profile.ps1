@@ -1,10 +1,8 @@
 # Profile
 
 
-
 # vars
 $ProfileBasePath = $PSScriptRoot
-
 
 
 # import modules
